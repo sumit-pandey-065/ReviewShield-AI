@@ -1,101 +1,71 @@
-# 🛡️ ReviewShield AI
-### AI-Powered Review Intelligence System
+# ReviewShield AI
 
-> Detect fake reviews, analyze sentiment, and generate authenticity insights using Machine Learning and NLP.
+## AI-Powered Fake Review Detection & Analysis System
 
----
+ReviewShield AI is a machine learning and NLP-based system designed to detect potentially fake or spam product reviews. The platform analyzes review authenticity using TF-IDF vectorization, Logistic Regression classification, sentiment analysis, and spam pattern detection techniques.
 
-## 🚀 Quick Start
-
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Train the ML model (first time only)
-python model.py
-
-# 3. Run the app
-streamlit run app.py
-```
-
-App opens at: `http://localhost:8501`
+The system also provides authenticity scoring, bulk CSV review analysis, real-time prediction, and intelligent review analytics through an interactive Streamlit interface.
 
 ---
 
-## ✨ Features
+## Core Features
 
-| Feature | Description |
-|---|---|
-| 🔍 **Fake Detection** | Logistic Regression classifier detects fake vs genuine reviews |
-| 💬 **Sentiment Analysis** | Positive / Neutral / Negative classification |
-| 🚨 **Spam Detection** | Detects ALL CAPS, promo phrases, excessive punctuation |
-| 🏆 **Authenticity Score** | 0–100 composite score per review |
-| 📂 **Bulk Analysis** | Upload CSV for batch processing |
-| 📊 **Dashboard** | Charts: trends, sentiment distribution, score histograms |
-| ⬇️ **Export** | Download results as CSV |
+- Fake Review Detection
+- Sentiment Analysis
+- Spam Pattern Recognition
+- Authenticity Scoring
+- Bulk CSV Review Analysis
+- Interactive Dashboard Analytics
+- Automated PDF Report Generation
+- Real-Time Review Prediction
 
 ---
 
-## 📁 Project Structure
+## Machine Learning Workflow
 
-```
+1. Text Preprocessing
+2. TF-IDF Feature Extraction
+3. Logistic Regression Classification
+4. Sentiment Analysis
+5. Spam Pattern Detection
+6. Authenticity Score Generation
+7. Analytics & Report Generation
+
+---
+
+## Tech Stack
+
+- Python
+- scikit-learn
+- Streamlit
+- pandas
+- numpy
+- matplotlib
+- TF-IDF Vectorizer
+- Logistic Regression
+- joblib
+
+---
+
+## Project Structure
+
+```text
 reviewshield-ai/
-├── app.py                  # Main Streamlit app
-├── model.py                # ML training & prediction
-├── preprocess.py           # Text cleaning pipeline
-├── sentiment.py            # Sentiment analysis
-├── spam_detector.py        # Spam pattern detection
-├── requirements.txt        # Dependencies
+│
+├── app.py
+├── model.py
+├── preprocess.py
+├── sentiment.py
+├── spam_detector.py
+├── requirements.txt
+├── README.md
+│
 ├── dataset/
-│   └── reviews_dataset.csv # Training data
 ├── models/
-│   ├── fake_review_model.pkl
-│   └── vectorizer.pkl
+├── reports/
 └── utils/
-    └── helpers.py          # Scoring utilities
 ```
 
----
-
-## 🧠 ML Pipeline
-
-```
-Raw Review Text
-      ↓
-Text Preprocessing (lowercase, remove punct, stopwords, stemming)
-      ↓
-TF-IDF Vectorization (5000 features, bigrams)
-      ↓
-Logistic Regression Classifier
-      ↓
-Prediction + Confidence Score
-      ↓
-Sentiment Analysis + Spam Detection
-      ↓
-Authenticity Score (0–100)
-      ↓
-Dashboard & Analytics
-```
 
 ---
 
-## 📊 Resume Description
-
-> **ReviewShield AI – AI-Powered Review Intelligence System**
-> Developed an NLP-based fake review detection system using Python and machine learning.
-> Implemented TF-IDF vectorization, Logistic Regression classifier, sentiment analysis, spam pattern detection, and authenticity scoring. Built interactive Streamlit dashboards, bulk CSV analysis, and downloadable report generation for review analytics.
-
----
-
-## 🛠️ Tech Stack
-
-- **Python 3** — Core language
-- **scikit-learn** — ML model + TF-IDF
-- **Streamlit** — Modern web UI
-- **pandas / numpy** — Data processing
-- **matplotlib** — Visualizations
-- **joblib** — Model persistence
-
----
-
-*Built for Amazon internship project · ReviewShield AI v1.0*
