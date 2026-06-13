@@ -1,16 +1,3 @@
-"""
-ReviewShield AI - Machine Learning Model Module
-Full pipeline: EDA -> Preprocessing -> TF-IDF -> Model Comparison (GridSearchCV)
-              -> Cross-validation -> Evaluation (Confusion Matrix, ROC-AUC)
-              -> Saves metrics for the dashboard
-
-NOTE: Multiple models were benchmarked (Logistic Regression, Multinomial Naive
-Bayes, Linear SVM). Logistic Regression with tuned TF-IDF (sublinear_tf=True)
-and GridSearchCV-selected C gave the best F1 / ROC-AUC balance, so it is used
-as the final model. The other model code is kept below (commented out) for
-reference / report purposes.
-"""
-
 import os
 import json
 import warnings
